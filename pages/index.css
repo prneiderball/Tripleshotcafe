@@ -1,5 +1,5 @@
 /* General Styles */
-@import url(/vendors/normalize.css);
+@import url(../vendors/normalize.css);
 
 .page {
   min-width: 1100px;

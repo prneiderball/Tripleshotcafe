@@ -356,3 +356,35 @@
   gap: 100px;
   justify-content: center;
 }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.card__title {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card__list-item {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Noto Serif", "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.card__list-divider {
+  margin: 0 10px;
+}

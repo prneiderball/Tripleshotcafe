@@ -314,7 +314,6 @@
 }
 
 /* ========================================== */
-/* Menu Section Styles */
 .menu {
   padding: 100px 0;
   display: flex;
@@ -326,22 +325,22 @@
   background-size: cover;
 }
 
-.menu__title,
-.menu__subtitle {
-  margin: 0;
+.menu__title {
+  margin: 0 0 24px;
   max-width: 780px;
   font-family: "Inter", "Arial", sans-serif;
-}
-
-.menu__title {
+  font-style: normal;
   font-weight: 500;
   font-size: 44px;
   line-height: 52px;
 }
 
 .menu__subtitle {
-  margin-bottom: 100px;
+  margin: 0 0 100px;
+  max-width: 780px;
   font-family: "Noto Serif", "Times New Roman", serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 20px;
   line-height: 30px;
   text-align: center;
@@ -350,7 +349,7 @@
 .menu__cards {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   gap: 100px;
@@ -358,33 +357,34 @@
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.card__title {
-  font-family: "Inter", "Arial", sans-serif;
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 40px;
+  max-width: 540px;
+  width: 540px;
 }
 
 .card__list {
-  list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card__title {
+  margin: 0 0 32px;
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .card__list-item {
   display: flex;
-  justify-content: space-between;
   font-family: "Noto Serif", "Times New Roman", serif;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .card__list-divider {
-  margin: 0 10px;
+  flex-grow: 1;
+  border-bottom: 1px solid #000;
 }

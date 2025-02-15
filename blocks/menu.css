@@ -1,5 +1,5 @@
 .menu {
-  padding: 100px 0;
+  padding: 10vh 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,35 +7,105 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.menu__title {
-  margin: 0 0 24px;
-  max-width: 780px;
-  font-family: "Inter", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 44px;
-  line-height: 52px;
-}
-
-.menu__subtitle {
-  margin: 0 0 100px;
-  max-width: 780px;
-  font-family: "Noto Serif", "Times New Roman", serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 30px;
   text-align: center;
 }
 
+.menu__title {
+  margin-bottom: 24px;
+  max-width: 80%;
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: clamp(32px, 5vw, 44px); /* Scales between 32px and 44px */
+  line-height: 1.2;
+}
+
+.menu__subtitle {
+  margin-bottom: 5vh;
+  max-width: 80%;
+  font-family: "Noto Serif", "Times New Roman", serif;
+  font-size: clamp(16px, 2.5vw, 20px);
+  line-height: 1.5;
+}
+
 .menu__cards {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 100px;
+  gap: 50px; /* Default gap */
   justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+/* Card Styling */
+.card {
+  max-width: 320px; /* Prevents stretching */
+  min-width: 280px;
+  width: 90%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .menu {
+    padding: 8vh 5vw;
+  }
+
+  .menu__title {
+    font-size: clamp(28px, 5vw, 40px);
+  }
+
+  .menu__subtitle {
+    font-size: clamp(14px, 2.5vw, 18px);
+  }
+
+  .menu__cards {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu__title {
+    font-size: clamp(24px, 6vw, 36px);
+  }
+
+  .menu__subtitle {
+    font-size: clamp(14px, 3vw, 16px);
+  }
+
+  .menu__cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    padding: 5vh 5vw;
+  }
+
+  .menu__title {
+    font-size: clamp(20px, 7vw, 30px);
+  }
+
+  .menu__subtitle {
+    font-size: clamp(12px, 4vw, 16px);
+  }
+
+  .menu__cards {
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 15px;
+  }
 }

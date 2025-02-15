@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const menuData = [
     {
-      category: "Specialty Drinks",
+      category: "Grab & Go",
       items: [
-        { name: "Caramel Macchiato", price: "$5" },
-        { name: "Pumpkin Spice Latte", price: "$5.50" },
-        { name: "Peppermint Mocha", price: "$5.50" },
-        { name: "Iced Matcha Latte", price: "$5.75" },
-        { name: "Iced Chai Latte", price: "$5.25" },
+        { name: "Water", price: "$2" },
+        { name: "tea", price: "$2.50" },
+        { name: "Juice", price: "$2.50" },
+        { name: "Energy Drink", price: "$3.75" },
       ],
     },
     {

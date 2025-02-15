@@ -44,10 +44,3 @@ This project is the second assignment in the Software Engineering program at Tri
 
 - **Streamlined Updates:**
   - Enhance the dynamic pricing system (already implemented via JavaScript arrays) so that business owners can update menu prices quickly, with automatic updates across all components.
-
-## Getting Started
-
-1. **Clone the Repository:**
-   ```bash
-   git clone [repository-url]
-   ```

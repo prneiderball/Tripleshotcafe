@@ -1,13 +1,61 @@
 .menu {
+  position: relative; /* Establish positioning context */
   padding: 10vh 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(../images/background_menu.svg);
+  background: #cadbf2;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+  overflow: hidden; /* Hide overflow from animated elements */
+}
+
+/* Larger, static circle in the background */
+.menu::before {
+  content: "";
+  position: absolute;
+  width: 400px; /* Increased size */
+  height: 400px;
+  background: rgba(71, 17, 165, 0.05);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* Smaller circle that orbits around the center */
+.menu::after {
+  content: "";
+  position: absolute;
+  width: 50px; /* Size of the orbiting circle */
+  height: 50px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  /* Using an orbit radius of 225px (200px from the larger circle’s radius + 25px for half the orbiting circle) */
+  transform: rotate(0deg) translateX(225px) translate(-50%, -50%);
+  animation: orbit 10s linear infinite;
+  z-index: 0;
+}
+
+/* Keyframes for orbit animation */
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(225px) translate(-50%, -50%);
+  }
+  100% {
+    transform: rotate(360deg) translateX(225px) translate(-50%, -50%);
+  }
+}
+
+/* Ensure any direct menu content appears above the background circles */
+.menu > * {
+  position: relative;
+  z-index: 1;
 }
 
 .menu__title {

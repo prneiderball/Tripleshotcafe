@@ -105,7 +105,7 @@
   .header__image {
     width: 65vw;
     top: auto;
-    right: 50%;
+    right: 30%;
     transform: translateX(50%);
     position: relative;
     max-height: 400px;
